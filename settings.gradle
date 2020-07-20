@@ -1,0 +1,2 @@
+rootProject.name='Admin_veg_delivery'
+include ':app'

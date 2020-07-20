@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.admin_veg_delivery">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/about"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/about"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Dashboad"
+            android:label="Dashboard"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".OderActivity"
+            android:label="Oders"
+            android:parentActivityName=".Dashboad" >
+
+        </activity>
+        <activity
+            android:name=".Item_listActivity"
+            android:label="Vegetable List"
+            android:parentActivityName=".Dashboad" />
+        <activity
+            android:name=".Add_itemActivity"
+            android:label="Add Item"
+            android:parentActivityName=".Dashboad" />
+        <service android:name=".MyFireBaseService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
