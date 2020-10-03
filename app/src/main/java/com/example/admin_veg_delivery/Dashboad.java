@@ -34,7 +34,7 @@ public class Dashboad extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboad);
-        price_list=findViewById(R.idprice_list);
+        price_list=findViewById(R.id.price_list);
         add_item=findViewById(R.id.add_item);
         oders=findViewById(R.id.oder);
 
